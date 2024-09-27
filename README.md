@@ -6,4 +6,5 @@
 #### - help command - list available commands
 #### - cat command - reads each File parameter in sequence and writes it to standard output
 #### - VGA support
+#### - Simple keyboard driver
 
