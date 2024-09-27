@@ -7,4 +7,5 @@
 #### - cat command - reads each File parameter in sequence and writes it to standard output
 #### - VGA support
 #### - Simple keyboard driver
+###### The project will be developed in the future :)
 
