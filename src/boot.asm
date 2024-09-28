@@ -67,5 +67,6 @@ section .bss
 resb 1024
 stack_top:
 
-times 510-($-$$) db 0
-dw 0xAA55
+section .bootsector
+    times 510-($-$$) db 0
+    dw 0xAA55
