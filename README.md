@@ -1,7 +1,7 @@
 # Flux kernel
 ## Flux kernel is an amateur project created by me, it is a kernel with basic functions and is not suitable for everyday use
 ## Flux Kernel motto - do it yourself
-This means that the basic version of the kernel works as a template that you can use to create your own operating system
+#### This means that the basic version of the kernel works as a template that you can use to create your own operating system
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 ### Supported features:
 #### - CD command - change the working directory
