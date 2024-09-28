@@ -1,4 +1,8 @@
+org 0x7C00
+bits 16
+
 section .multiboot
+align 4
 dd 0x1BADB002             ; magic number
 dd 0x00000003             ; flags
 dd 0x10000000 - (0x1BADB002 + 0x00000003) ; checksum
@@ -8,6 +12,8 @@ global start
 
 start:
     ; Set up a basic stack
+    mov ax, 0
+    mov ss, ax
     mov esp, stack_top
     mov ebp, esp
 
@@ -27,7 +33,8 @@ start:
     jc error               ; jump if carry flag is set (error)
 
     ; Jump to the kernel
-    jmp kernel_main
+    add eax, 0x1000
+    jmp eax
 
 error:
     ; handle error here
@@ -59,3 +66,6 @@ error_message db 'Error loading kernel!', 0
 section .bss
 resb 1024
 stack_top:
+
+times 510-($-$$) db 0
+dw 0xAA55
